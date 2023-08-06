@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formula 1 Nerds</title>
+    <link rel="stylesheet" href="nuko.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="nuko.js"></script>
+
+</head>
+
+<body>
+
+<div class='formula-header'>
+    <img src="logos/formula1.png" class='f1logo'>
+    <h1> Formula 1 </h1>
+
+    <nav class='formula-header-nav'>
+<ul class="nav">
+    <li><a href="">Formula 1</a>   </li>
+    <li><a href="">Formula 2</a>  </li>
+    <li><a href="">MotoGP</a>   </li>
+    <li><a href="">Superbike</a>    </li>
+</ul>
+</nav>
+</div>
+
+<SEction id="container">
+<div style ="background-color:red" > </div>
+<div style ="background-color:blue" > </div>
+<div style ="background-color:white" > </div>
+<div style ="background-color:black" > </div>
+
+
+
+</SEction>
+
+</div>
+<div class="kutum" style ="background-color:red" > </div>
+
+
+
+<div class="container">
+<div class="row p-0">
+    <div class="col-8 bg-success">6 ünit</div>
+    <div class="col-2 bg-danger">6 ünit</div>
+</div>
+</div>
+
+<div class="container">
+<div class="row ">
+    <div class="col-6 bg-success">asdasdananansssssssssss</div>
+    <div class="col bg-danger">auuuuuu</div>
+    <div class="col bg-warning">auuuuuu</div>
+</div>
+</div>
+
+<script src="nuko.js"></script>
+</body>
