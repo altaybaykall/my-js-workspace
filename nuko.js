@@ -136,9 +136,11 @@ const caps = texts.map(function(text){
      return text.toUpperCase();
 })
 
-const sum = (a,b) => (
-   a+b
-)
+function buyut2 (a) {
+  return a.toUpperCase;
+}
+const sum = (a,b) => ( a+b )
+const buyut = (yazi) => ( yazi.toUpperCase())
 
 const caps2 = texts.map( text => 
    text.toUpperCase()

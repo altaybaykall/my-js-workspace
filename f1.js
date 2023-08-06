@@ -4,13 +4,9 @@
   var redbullbrand = document.getElementById('redbullbrand');
   var p1 = document.getElementById('pilot1');
   var p2 = document.getElementById('pilot2');
-  var title = document.querySelector('span');
+  var heads = document.querySelectorAll('#rainbow');
 
-  title.style.color = "yellow";
-  title.style.fontSize = "2rem";
-  title.style.position = "absolute";
-  title.style.textAl
-
+  console.log(heads);
   var brandInfo = [
     { logo: 'logos/ferrari.png', brand: 'Ferrari', p1: 'Leclerc', p2: 'Sainz' },
     { logo: 'logos/mercedes.png', brand: 'Mercedes', p1: 'Russell', p2: 'Hamilton' },
@@ -32,9 +28,12 @@
   setInterval(changeLogo, 600);
 
   const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']; //PLEASE DON'T CHANGE THIS LINE!
-
-var heads = document.querySelectorAll('span');
-
 for(let tt in heads) {
-    tt.style.color = colors[tt];
+  console.log(colors[tt])  
+  heads[tt].style.color = colors[tt];
 }
+
+
+const newH3 = document.createElement('h3')
+newH3.innerText = "selam";
+document.body.append(newH3);

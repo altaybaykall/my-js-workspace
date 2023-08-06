@@ -5,7 +5,7 @@
     <title>Formula 1 Nerds</title>
     <link rel="stylesheet" href="loginn.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <script src=".js"></script>
+      
 </head>
 
 <body>
@@ -27,8 +27,7 @@
 </div>
 </div>
     
-  <span>Span title </span>
-    <h2> <span>  Formula 1 pilotları </span> &#9731 </h2>
+    <h2>   Formula 1 pilotları  &#9731 </h2>
     <div class='takim'>
         <ul>
         <div class='Redbull'>    
@@ -97,14 +96,22 @@
             </tr>
         </tbody>
         <h1>
-        <span>R</span>
-        <span>A</span>
-        <span>I</span>
-        <span>N</span>
-        <span>B</span>
-        <span>O</span>
-        <span>W</span>
+        <span id='rainbow'>R</span>
+        <span  id='rainbow'>A</span>
+        <span id='rainbow'>I</span>
+        <span id='rainbow'>N</span>
+        <span id='rainbow'>B</span>
+        <span id='rainbow'>O</span>
+        <span id='rainbow'>W</span>
     </h1>
+    <ul>
+        <li>Hello</li>
+        <li class="highlight">Hello</li>
+        <li>Hello</li>
+        <li>Hello</li>
+        <li class="highlight">Hello</li>
+        <li>Hello</li>
+    </ul>
     </table>
 </body>
 
@@ -112,47 +119,5 @@
     <p> <b>HELP</b> </p>
 </footer>
 
-<script>
-  var redbull = document.getElementById('redbull');
-  var redbullbrand = document.getElementById('redbullbrand');
-  var p1 = document.getElementById('pilot1');
-  var p2 = document.getElementById('pilot2');
-  var title = document.querySelector('span');
-
-  title.style.color = "yellow";
-  title.style.fontSize = "2rem";
-  title.style.position = "absolute";
-  title.style.textAl
-
-  var brandInfo = [
-    { logo: 'logos/ferrari.png', brand: 'Ferrari', p1: 'Leclerc', p2: 'Sainz' },
-    { logo: 'logos/mercedes.png', brand: 'Mercedes', p1: 'Russell', p2: 'Hamilton' },
-    { logo: 'logos/redbull.png', brand: 'RedBull', p1: 'Verstappen', p2: 'Ricciardio' }
-  ];
-
-  let getIndex = 0;
-
-  function changeLogo() {
-    var currentBrand = brandInfo[getIndex];
-    redbull.src = currentBrand.logo;
-    redbullbrand.innerText = currentBrand.brand;
-    p1.innerText = currentBrand.p1;
-    p2.innerText = currentBrand.p2;
-    getIndex = (getIndex + 1) % brandInfo.length;
-  }
-
-  changeLogo();
-  setInterval(changeLogo, 600);
-
-  const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']; //PLEASE DON'T CHANGE THIS LINE!
-
-var heads = document.querySelectorAll('span');
-
-for(let tt in heads) {
-    tt.style.color = colors[tt];
-    
-    
-}
-</script>
-
+<script src="f1.js"></script>
 </html>
