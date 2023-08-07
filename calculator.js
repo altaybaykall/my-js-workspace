@@ -1,9 +1,9 @@
 let sonuc =document.getElementById('result')
 let top_result =document.getElementById('inv-result')
-let nums = []; 
-let co_num = 0; 
+let co_num = null; 
 let say = []; 
 let islem = [];
+let co_islem = null;
 
 function getValue(num) {
    say.push(num); 
@@ -13,29 +13,31 @@ function getValue(num) {
 
 }
 
-
 function getIslem(get_islem) {
-   
-   const currentNumber = parseInt(say.join(''));
-   islem.push({ type: get_islem, value: currentNumber });
-   sonuc.value = islem; 
+    if (co_num !== null ) {
+    islem.push({ type: get_islem, value: parseInt(co_num)});
+    }
+   sonuc.value = '...'
+   co_islem = get_islem;
    clear();
+   printExpression()
 }
 
-
-function getResult() {
+function getResult() { 
     if (say.length > 0) {
-        const currentNumber = parseInt(say.join(''));
-        islem.push({ type: 'number', value: currentNumber });
+       if (co_num !== null ) {
+        islem.push({ type: co_islem, value: parseInt(co_num) });
+       }
         say = [];
     }
+   
+    let result = parseInt(islem[0].value);
 
-    let result = islem[0].value;
+    for(let i = 1 ; i < islem.length; i ++) {
 
-    for (let i = 1; i < islem.length; i++) {
         const operation = islem[i].type;
-        const value = islem[i].value;
-
+        const value = parseInt(islem[i].value);
+        
         if (operation === '+') {
             result += value;
         } else if (operation === '-') {
@@ -44,32 +46,56 @@ function getResult() {
             result *= value;
         } else if (operation === '/') {
             result /= value;
+        } 
+        else if (operation === null) {
+            result += value;
         }
     }
-
     sonuc.value = result;
-    islem = [];
+    co_num = null;
+    result = 0;
+    printExpression()
+    
 }
-
-
-function getResult2() {
-    clear();
-    let sum = 0 ;
-    const intArray = nums.map((str) => parseInt(str));
-    for(let arg of intArray) 
-    sum+= arg;  
-    sonuc.value = sum;
-
+function debug() {
+    console.log('say'+ say)
+    console.log('co_num'+ co_num) 
+    console.log(islem)
     
 }
 function reset() {
     sonuc.value = '...';
-    co_num = 0; 
+    co_num =null; 
    say = [];
-   nums = [];
+   islem= [];
+   top_result.innerText= '...'
+
 }
 function clear(){
-    nums.push(co_num);
-   co_num = 0; 
+   co_num = null; 
    say = [];
+}
+function printExpression() {
+    let expression = "";
+    for (let i = 0; i < islem.length; i++) {
+        const operation = islem[i].type;
+        const value = islem[i].value;
+       
+         // 0 için if (-)  {value } + op 
+         // 1 için op + value
+
+            if (i == 0) {
+                if(operation == '-') {
+                    expression = expression +operation + value;
+                }
+                else {
+                    expression += value;
+                } 
+            }
+            else{
+                    expression = expression + operation + value  ;
+            }
+    }
+    top_result.innerText = expression
+    
 }

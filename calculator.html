@@ -51,16 +51,22 @@
     Altay Baykal 
    </p></div>
 <table id="calcu">
-    <tr> 
-       <td> <h3 id="inv-result">0</h3>
-    </tr>    
-    <tr>
-            <td colspan="3">
-                <input type="text" value=""  id="result">
+     
+     <th colspan="5">
+        <h3 style="color: lightslategray; text-align: left;" id="inv-result">0</h3>  
+     </th>
+
+        <tr>
+         <td colspan="3">
+             
+            <input type="text" value=""  id="result">
             </td>
-            <td><input type="button" style="background-color: brown;" class="btn-oper" onclick="reset()" value="c"></td>
+            <td>
+                <input type="hidden" value="asdadas">
+                <input type="button" style="background-color: brown;" class="btn-oper" onclick="reset()" value="c">
+            </td>
+        
         </tr>
-  
         <tr>
             <td><input  type="button" class="btn-num" onclick="getValue('1')" value="1"> </td>
             <td><input type="button" class="btn-num" onclick="getValue('2')" value="2"></td>
@@ -81,7 +87,7 @@
         </tr>
         <tr>
             <td><input type="button" class="btn-num" onclick="getValue('0')" value="0"></td>
-            <td><input type="button"  class="btn-oper" value="."></td>
+            <td><input type="button"  class="btn-oper" onclick="debug()" value="debug"></td>
             <td><input type="button"  style="background-color: lightseagreen;"  onclick="getResult()" value="="></td>
             <td><input type="button" class="btn-oper" onclick="getIslem('+')" value="+"></td>
         </tr>
