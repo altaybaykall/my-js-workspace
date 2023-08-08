@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../random-color/random.css">
+    <style>
+        ul {
+            border: 1px solid black;
+            padding: 50px;
+        }
+          button {
+            padding: 3px;
+             border-radius: 5px;
+          }
+
+        input[type="text"] {
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+        #mylist {
+  list-style-type: disc; /* Daire işareti ile işaretlendirme */
+  padding-left: 20px; /* Sol kenar boşluğu ayarlamak için */
+}
+
+#mylist li {
+  margin-bottom: 10px; /* Her liste öğesi arasına boşluk bırakmak için */
+}
+    </style>
+</head>
+
+<body>
+   <div class="center">
+
+  
+    <h1> To-do-List </h1>
+    <form action='javascript.void' id='testform' method="post">
+        <p>Ekleyin</p>
+        <p>
+            <input id="name" type="text" name="isim" id="isim" minlength="3" maxlength="20">
+        </p>
+        <p>
+            <button style="background-color: green;color: white;" type="submit">Ekle</button>
+        </p>
+
+    </form>
+    <p>Listem</p>
+    <ul id="mylist">
+      <li id="list-0">Selam!  <button id="deletebutton">Sil</button></li>
+    </ul>
+   
+
+</div>
+</body>
+<script>
+  const submit = document.querySelector('#testform')
+   const input_value =document.querySelector('#name')
+   const list =document.querySelector('#mylist')
+    refresh();
+   submit.addEventListener('submit',function(e){
+    e.preventDefault();
+    
+    const  name = input_value.value
+    const newLi =document.createElement("LI");
+    const newLiButton =document.createElement("button");
+    newLiButton.id = 'deletebutton';
+    newLiButton.innerText='Sil';
+    newLi.innerText = name;
+    newLi.appendChild(newLiButton);
+    list.append(newLi);
+    input_value.value = " ";
+    refresh();
+   })
+   
+ 
+function refresh(){
+    const buttons = document.querySelectorAll('#deletebutton');
+
+for (let button of buttons) {
+    button.addEventListener('click', function() {
+    this.parentElement.remove()
+    });
+}
+}
+
+  
+   
+   </script>
+
+</html>
