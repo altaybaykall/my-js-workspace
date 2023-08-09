@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../random-color/random.css">
+    
+    <style>
+        #bir, #iki, #uc, #dort, #bes, #alti, #yedi, #sekiz, #dokuz {
+  font-size: 70px;
+  width: 100px;
+  height: 100px;
+}
+
+table {
+  margin: auto;
+}
+
+#ana {
+  width: 18%;
+  border: 3px solid gray;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Monospace;
+}
+
+#puan {
+  border: 3px solid gray;
+  
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-family: Monospace;
+  padding: 15px;
+  
+  
+}
+#puan tr {
+    padding: 10px;
+    margin: 30px;
+}
+
+#yeniden {
+  text-align: center;
+  font-size: 18px;
+  font-family: Monospace;
+  margin-left: 45%;
+  margin-right: 45%;
+}
+.xox {
+   background-color: #F0F0F0;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+.xox:hover {
+  background-color: lightgrey;
+}
+    </style>
+</head>
+<body>
+    <div class="center">
+
+ <div class="center">    <div id="xox"> 
+    <table id="puan">
+       <tr>
+         <td>X </td>
+         <td id="xscore"> Puan : 0</td>
+       </tr>
+       <tr>
+         <td>O  </td>
+         <td id="oscore"> Puan : 0</td>
+       </tr>
+     </table>
+    
+      <h1 style="display: none;"> kazanan </h1>
+      <h1 id="turn"> Sıra : X </h1>
+    <table id="ana">
+      <tr>
+        <td><button class="xox" id="bir" ></button></td>
+        <td><button  class="xox" id="iki" ></button></td>
+        <td><button  class="xox" id="uc" ></button></td>
+      </tr>
+      <tr>
+        <td><button  class="xox" id="dort"></button></td>
+        <td><button  class="xox" id="bes" ></button></td>
+        <td><button   class="xox" id="alti" ></button></td>
+      </tr>
+      <tr>
+        <td><button  class="xox" id="yedi" ></button></td>
+        <td><button  class="xox" id="sekiz" ></button></td>
+        <td><button  class="xox" id="dokuz"></button></td>
+      </tr>
+    </table>
+      <br><br>
+      <button id="reset" >Eli Sıfırla</button>
+      <button id="reset" onclick="location.reload();">Oyunu Sıfırla</button>
+    </div>
+    </div>
+
+<script>
+const buttons = document.querySelectorAll('.xox')
+const reset = document.querySelector('#reset')
+const turn_header = document.querySelector('#turn')
+const oscore = document.querySelector('#oscore')
+const xscore = document.querySelector('#xscore')
+
+let GameActive = true;
+let player_turn = 0;
+let player_symbol = 'X';
+let x_score = 0 ;
+let o_score = 0;
+
+const winningCombinations = [
+  ["bir", "iki", "uc"],
+  ["bir", "bes", "dokuz"],
+  ["bir", "dort", "yedi"],
+  ["uc", "bes", "yedi"],
+  ["uc", "alti", "dokuz"],
+  ["iki", "bes", "sekiz"],
+  ["dort", "bes", "alti"],
+  ["yedi", "sekiz", "dokuz"],
+];
+
+
+
+function player(){
+    if(player_turn % 2 == 0) {
+       player_turn ++;
+       player_symbol = 'X';
+       turn_header.innerText = 'Sıra : O '
+       
+    }
+    else {
+        player_turn ++;
+        player_symbol = 'O';
+        turn_header.innerText = 'Sıra : X '
+        
+    }
+
+}
+
+
+for(let button of buttons) {
+   button.addEventListener('click',function(){
+    if(GameActive == true) {
+  
+    if(this.innerText === '') {
+      player()
+      this.innerText = player_symbol;
+    this.style.backgroundColor = 'white';
+    if(player_turn > 0)
+    checkGame();
+     }
+    }
+   })
+}
+
+function checkGame() {
+  for (const combination of winningCombinations) {
+    let isWinning = true;
+     let  winnerCombin = combination
+    for (const cell of combination) {
+      const cellElement = document.getElementById(cell);
+      const cellContent = cellElement.innerText;
+
+      if (cellContent !== player_symbol) {
+        isWinning = false;
+        break; 
+      }
+    }
+
+    if (isWinning) {
+      turn_header.innerText = player_symbol + ' Kazandı';
+      
+      if (player_symbol === 'X') {
+        x_score++;
+        xscore.innerText = 'Puan' + ' : '+ x_score
+      } else {
+        o_score++;
+        oscore.innerText = 'Puan' + ' : '+ o_score
+      }
+      for(let button of buttons) {
+            button.style.backgroundColor = 'lightgrey';
+        }
+        for (const cell of winnerCombin) {
+      const winElement = document.getElementById(cell);
+           winElement.style.backgroundColor = 'green'
+        }
+      GameActive = false;
+      console.log(winnerCombin)
+      break; 
+    }
+  }
+}
+    reset.addEventListener('click',function(){
+        for(let button of buttons) {
+            button.innerText =''
+            button.style.backgroundColor = '#F0F0F0';
+            turn_header.innerText = 'Sıfırlandı  Sıra : X'
+            button.addEventListener('mouseover', function() {
+        this.style.backgroundColor = 'lightgrey';
+    });
+
+    button.addEventListener('mouseout', function() {
+        this.style.backgroundColor = '';
+    });
+
+        }
+        GameActive = true;
+        
+   });
+ 
+    
+
+</script>
+
+    </body>
+    </html>
