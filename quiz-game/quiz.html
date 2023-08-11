@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      body {
+        background-color: lightslategray;
+        font-family:Verdana, Geneva, Tahoma, sans-serif
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .quiz-box {
+        background-color: white;
+        padding: 20px;
+        border-radius: 6px;
+        width: 700px;
+      }
+      .question-num-text {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .answers {
+        margin-top: 20px;
+        
+      }
+      .answers button {
+        min-width: 270px;
+      padding: 10px 20px 10px 20px;
+      margin: 5px 0 10px 0;
+      overflow-wrap: break-word;
+      overflow: hidden;
+      }
+      .question {
+        margin-top: 25px;
+        font-size: 21px;
+        font-weight: 600;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <p>
+      Altay Baykal <br />
+      Quiz Sistemi JavaScript
+    </p>
+    <div class="center">
+      <div class="start-box">
+        <div class="card" style="width: 40rem; padding: 10px;">
+         <div class="card-body">
+          <p>Bu quizde 20 sorudan sorumlusunuz. Her sorunun dört şık cevap seçeneği bulunmaktadır. Süre sınırlaması bulunmamaktadır; rahatça cevaplayabilirsiniz. Başarılar dileriz!</p>
+        </div>
+         <button  id="start" class="btn btn-primary btn-lg" type="submit">Başla !</button>
+        </div>
+      </div>
+      <div class="end-box" style="display: none;">
+        <div class="card" style="width: 40rem; padding: 10px;">
+          <h4>Quiz Bitti  Sonucunuz :</h4>
+          <p>20 Soruda</p>
+          <p id="dogru_display" style="color: green;"> 13 Doğru </p> 
+           <p id="yanlis_display" style="color: red;"> 7 Yanlış</p>
+         <button  id="restart" class="btn btn-primary btn-lg" type="submit">Tekrar Başla !</button>
+        </div>
+      </div>
+
+        <div style="display: none;" class="quiz-box">
+        <div class="question-num-text"> 
+           <div>  <span>Soru -</span> <span class="question-num">1</span></div>
+        <div id="correct-count"> 1 / 1</div>
+        </div>
+        <div class="question"><h3>Aşağadıdakilerden Hangisi Bir CSGO Rankı Değildir ?</h3></div>
+        <div class=" d-flex justify-content-center "><h3 style="font-weight: 800;" id="response"  ></h3></div>
+        <div class="answers">
+            <div class="row">
+                <div class="col-lg-12 justify-content-evenly d-flex">
+                    <button id="cevap" class="btn btn-primary" type="submit">A- Radiant</button>
+                    <button  id="cevap" class="btn btn-primary" type="submit">B- Global</button>
+                </div>
+               
+                <div class="col-lg-12 justify-content-evenly d-flex">
+                    <button  id="cevap" class="btn btn-primary" type="submit">C- Supreme</button>
+                    <button  id="cevap" class="btn btn-primary" type="submit">D- LEM</button>
+                </div>
+                
+            </div>
+      </div>
+      <div style="display: flex; justify-content: right;margin-top: 15px;">
+        <button style="display: none;" id="result" class="btn btn-warning" type="submit">Sonucumu Gör</button>
+        <button style="display: none;" id="next" class="btn btn-warning" type="submit">Sonraki Soru -></button>
+    
+    
+      </div> 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+   <script src="quiz.js"></script>
+  </body>
+</html>

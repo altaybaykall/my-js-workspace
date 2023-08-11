@@ -1,0 +1,203 @@
+[
+  {
+    "soru": "Hangi pilot 2021 Formula 1 Dünya Şampiyonası'nı kazandı?",
+    "cevaplar": {
+      "a": "Lewis Hamilton",
+      "b": "Sebastian Vettel",
+      "c": "Max Verstappen",
+      "d": "Valtteri Bottas"
+    },
+    "cevap": "c"
+  },
+  {
+    "soru": "2020 Formula 1 sezonunda kim en hızlı tur rekorunu kırdı?",
+    "cevaplar": {
+      "a": "Max Verstappen",
+      "b": "Lewis Hamilton",
+      "c": "Valtteri Bottas",
+      "d": "Charles Leclerc"
+    },
+    "cevap": "b"
+  },
+  {
+    "soru": "En fazla Formula 1 Dünya Şampiyonluğuna sahip pilot kimdir?",
+    "cevaplar": {
+      "a": "Michael Schumacher",
+      "b": "Lewis Hamilton",
+      "c": "Ayrton Senna",
+      "d": "Alain Prost"
+    },
+    "cevap": "a"
+  },
+  {
+    "soru": "Hangi takım 2004 Formula 1 Dünya Şampiyonası'nda tüm yarışları kazanarak tarihte eşi benzeri görülmemiş bir başarı elde etti?",
+    "cevaplar": {
+      "a": "Red Bull",
+      "b": "Aston Martin",
+      "c": "Ferrari",
+      "d": "Mercedes"
+    },
+    "cevap": "c"
+  },
+  {
+    "soru": "Red Bull Racing ile hangi motor üreticisi işbirliği yapmaktadır?",
+    "cevaplar": {
+      "a": "Mercedes",
+      "b": "Ferrari",
+      "c": "Renault",
+      "d": "Honda"
+    },
+    "cevap": "d"
+  },
+  {
+    "soru": "Formula 1 araçlarında KERS ne anlama gelir?",
+    "cevaplar": {
+      "a": "Kinetic Energy Recovery System",
+      "b": "Key Energy Release System",
+      "c": "Karting Energy Recycling System",
+      "d": "Kinematic Energy Retention System"
+    },
+    "cevap": "a"
+  },
+  {
+    "soru": "2020 Formula 1 Dünya Şampiyonası'nı hangi takım kazandı?",
+    "cevaplar": {
+      "a": "Mercedes",
+      "b": "Red Bull Racing",
+      "c": "Ferrari",
+      "d": "McLaren"
+    },
+    "cevap": "a"
+  },
+  {
+    "soru": "Hangi pist Monako'da bulunmaktadır?",
+    "cevaplar": {
+      "a": "Circuit of the Americas",
+      "b": "Silverstone Circuit",
+      "c": "Monza Circuit",
+      "d": "Circuit de Monaco"
+    },
+    "cevap": "d"
+  },
+  {
+    "soru": "Formula 1 araçlarında mevcut lastik tedarikçisi olan firma hangisidir?",
+    "cevaplar": {
+      "a": "Bridgestone",
+      "b": "Pirelli",
+      "c": "Michelin",
+      "d": "Goodyear"
+    },
+    "cevap": "b"
+  },
+  {
+    "soru": "2021 sezonunda hangi ülkede ilk kez bir Formula 1 yarışı düzenlendi?",
+    "cevaplar": {
+      "a": "Vietnam",
+      "b": "Türkiye",
+      "c": "Portekiz",
+      "d": "Malaysia"
+    },
+    "cevap": "a"
+  },
+  {
+    "soru": "Formula 1 tarihinde en genç Dünya Şampiyonu olan pilot kimdir?",
+    "cevaplar": {
+      "a": "Sebastian Vettel",
+      "b": "Max Verstappen",
+      "c": "George Russell",
+      "d": "Recep Tayyip Erdoğan"
+    },
+    "cevap": "a"
+  },
+  {
+    "soru": "Formula 1 araçlarında DRS ne işe yarar?",
+    "cevaplar": {
+      "a": "Yakıt tüketimini kontrol etmek",
+      "b": "Lastik aşınmasını azaltmak",
+      "c": "Aerodinamik performansı artırmak",
+      "d": "Sıralama turu zamanını iyileştirmek"
+    },
+    "cevap": "c"
+  },
+  {
+    "soru": "Formula 1'de Pole ne anlama gelir ? ",
+    "cevaplar": {
+      "a": "Yarışı Kazanan pilot",
+      "b": "Ceza yemeden bitiren pilot",
+      "c": "Sıralama turları birincisi",
+      "d": "Lastik yönetebilen pilot"
+    },
+    "cevap": "c"
+  },
+  {
+    "soru": "Formula 1 araçlarının en yüksek hızları genellikle hangi pistte görülür?",
+    "cevaplar": {
+      "a": "Monza Circuit",
+      "b": "Hungaroring",
+      "c": "Singapore Street Circuit",
+      "d": "Yas Marina Circuit"
+    },
+    "cevap": "a"
+  },
+  {
+    "soru": "Bir Formula 1 yarışında kaç adet pit stop yapılabilir?",
+    "cevaplar": {
+      "a": "1 pit stop",
+      "b": "2 pit stop",
+      "c": "3 pit stop",
+      "d": "4 pit stop"
+    },
+    "cevap": "c"
+  },
+  {
+    "soru": "Formula 1 araçlarının frenleri nelerden üretilir?",
+    "cevaplar": {
+      "a": "Karbondan",
+      "b": "Plastikten",
+      "c": "Demirden",
+      "d": "Alüminyumdan"
+    },
+    "cevap": "a"
+  },
+  {
+    "soru": "Formula 1'de kaç takım vardır ?",
+    "cevaplar": {
+      "a": "8",
+      "b": "10",
+      "c": "12",
+      "d": "11"
+    },
+    "cevap": "b"
+  },
+  {
+    "soru": "Formula 1 'de bir yarış haftasonunda bir sürücünün yarışı kazanarak en hızlı turu atması ve yarışı en başından sonuna kadar lider olarak tamamlaması",
+    "cevaplar": {
+      "a": "Grand Slam",
+      "b": "Victory Trophy",
+      "c": "Fastest Lap Award",
+      "d": "Fast af 1"
+    },
+    "cevap": "a"
+  },
+  {
+    "soru": "2021 Formula 1 sezonunda hangi takım bir yarış kazanamadı?",
+    "cevaplar": {
+      "a": "Mercedes",
+      "b": "Red Bull Racing",
+      "c": "Ferrari",
+      "d": "McLaren"
+    },
+    "cevap": "c"
+  },
+  {
+    "soru": "Bonus : En iyi Formula 1 Pilotu kimdir ? (!)",
+    "cevaplar": {
+      "a": "Max Verstappen",
+      "b": "Lewis Hamilton",
+      "c": "Charles Lecerc",
+      "d": "George Russell"
+    },
+    "cevap": "d"
+  }
+ 
+]
