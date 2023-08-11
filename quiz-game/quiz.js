@@ -44,8 +44,7 @@ function startGame() {
       end_display.style.display = 'block'
       dogru_display.innerText = quest_correct_count + ' ' +'Doğru';
       yanlis_display.innerText = (sorular.length - quest_correct_count) + ' ' + 'Yanlış';
-      quest_num_count =  0;
-      quest_correct_count = 0;
+     
      });
   }
   return;
