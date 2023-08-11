@@ -10,24 +10,24 @@
     "cevap": "c"
   },
   {
-    "soru": "2020 Formula 1 sezonunda kim en hızlı tur rekorunu kırdı?",
+    "soru": "1996 Formula 1 Sezonu Şampiyonu kimdir ?",
     "cevaplar": {
-      "a": "Max Verstappen",
-      "b": "Lewis Hamilton",
-      "c": "Valtteri Bottas",
-      "d": "Charles Leclerc"
+      "a": "Jos Verstappen",
+      "b": "Damon Hill",
+      "c": "Michael Schumacher",
+      "d": "Mika Häkkinen"
     },
     "cevap": "b"
   },
   {
-    "soru": "En fazla Formula 1 Dünya Şampiyonluğuna sahip pilot kimdir?",
+    "soru": "Aşağıdaki pilotlardan hangisi 7 kere Formula 1  Şampiyonluğu kazanmıştır ?",
     "cevaplar": {
-      "a": "Michael Schumacher",
+      "a": "Kimi Räikkönen",
       "b": "Lewis Hamilton",
       "c": "Ayrton Senna",
       "d": "Alain Prost"
     },
-    "cevap": "a"
+    "cevap": "b"
   },
   {
     "soru": "Hangi takım 2004 Formula 1 Dünya Şampiyonası'nda tüm yarışları kazanarak tarihte eşi benzeri görülmemiş bir başarı elde etti?",
